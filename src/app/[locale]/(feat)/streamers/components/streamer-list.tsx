@@ -1,6 +1,6 @@
 import React from "react"
 import { deleteStreamer, fetchStreamers } from "@/src/lib/data/streams/streamer-apis"
-import StreamerListWrapper from "@/src/app/[locale]/(feat)/streamers/components/streamer-list-wrapper"
+import StreamerListWithSearch from "@/src/app/[locale]/(feat)/streamers/components/streamer-list-with-search"
 import { getTranslations } from "next-intl/server"
 
 export default async function StreamerList() {
@@ -12,7 +12,7 @@ export default async function StreamerList() {
 
 	return (
 		<>
-			<StreamerListWrapper
+			<StreamerListWithSearch
 				streamers={streamers}
 				templateStreamers={templateStreamers}
 				deleteStreamer={deleteStreamer}
